@@ -1,0 +1,31 @@
+.testContainer {
+  display: flex;
+  margin: 0;
+  height: 100%;
+  background-color: green;
+}
+
+.testLeft {
+  flex: 2.5;
+  background-color: royalblue;
+}
+
+.testRight {
+  flex: 2.5;
+  background-color: red;
+}
+
+.testWrapper {
+  display: block;
+  margin: 0;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  flex: 5;
+  background-color: greenyellow;
+}
+.testList {
+  margin: 0;
+  list-style: none;
+}

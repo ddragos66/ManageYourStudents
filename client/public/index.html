@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <m>
+        <meta charser="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta 
+        name="description"
+        content="Web site created using create-react-app"
+        />
+        <script src="https://kit.fontawesome.com/f51dada446.js" crossOrigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheed" href="http://localhost:3000/assets/style.css">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="72904640775-qa2q61fqfjakne5l3rmgo93bgllkdf2q.apps.googleusercontent.com"></meta>
+        <title>Test your student</title>
+    </head>
+    <body style = "margin:0">
+        <noscript>you need java script</noscript>
+        <div id="root"></div>
+        <script >
+            
+            
+
+            function onSignIn(googleUser) {
+                /* global gapi */
+                const profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                console.log('Name: ' + profile.getName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                console.log(profile);
+                const user = {
+                        username: profile.getName(),
+                        email: profile.getEmail(),
+                        password: "123"
+                }
+                //console.log(user)
+                localStorage["username"] = user.username;
+                localStorage["email"] = user.email;
+                localStorage["id"] = "ok";
+                guserEmail = localStorage["email"];
+                guserusername = localStorage["username"];
+                //console.log("guser: -> "+ guserEmail + " si "+guserusername);
+
+              }
+
+            
+        </script>
+    </body>
+</html>
